@@ -1,0 +1,28 @@
+{
+  "name": "ng2-ref-app",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "An Angular2 ref-app using TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkozlowski-opensource/ng2-ref-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pkozlowski-opensource/ng2-ref-app/issues"
+  },
+  "homepage": "https://github.com/pkozlowski-opensource/ng2-ref-app#readme",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.8.0",
+    "http-play": "^0.1.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.37",
+    "systemjs": "0.18.7"
+  }
+}
