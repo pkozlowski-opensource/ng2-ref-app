@@ -9,7 +9,8 @@ var PATHS = {
     lib: [
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
         'node_modules/systemjs/dist/system-csp-production.js',
-        'node_modules/angular2/bundles/angular2.js'
+        'node_modules/angular2/bundles/angular2.js',
+        'lib/ts-runtime.js'
     ],
     typings: 'node_modules/angular2/bundles/typings/angular2/angular2.d.ts'
 };
@@ -28,7 +29,8 @@ gulp.task('js', function () {
             module: 'system',
             target: 'ES5',
             emitDecoratorMetadata: true,
-            experimentalDecorators: true
+            experimentalDecorators: true,
+            noEmitHelpers: true
         }));
 
     return tsResult.js.pipe(gulp.dest('dist'));
