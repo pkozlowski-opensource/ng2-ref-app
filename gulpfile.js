@@ -9,7 +9,7 @@ var PATHS = {
     lib: [
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
         'node_modules/systemjs/dist/system-csp-production.js',
-        'node_modules/angular2/bundles/angular2.js',
+        'node_modules/angular2/bundles/angular2.min.js',
         'lib/ts-runtime.js'
     ],
     typings: 'node_modules/angular2/bundles/typings/angular2/angular2.d.ts'
