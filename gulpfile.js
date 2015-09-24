@@ -41,7 +41,10 @@ gulp.task('html', function () {
 });
 
 gulp.task('libs', function () {
-    return gulp.src(PATHS.lib).pipe(gulp.dest('dist/lib'));
+    var size = require('gulp-size');
+    return gulp.src(PATHS.lib)
+        .pipe(size({showFiles: true, gzip: true}))
+        .pipe(gulp.dest('dist/lib'));
 });
 
 gulp.task('play', ['libs', 'html', 'js'], function () {
