@@ -1,12 +1,12 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
+import {Greeter} from './greeter';
 
 @Component({selector: 'ng2-ref-app'})
-@View({template: `
-    <h1>Hello, {{name}}!</h1>
-    <input type="text" [value]="name" (input)="name = $event.target.value">
-`})
+@View({
+    template: `<greeter name="World"></greeter>`,
+    directives: [Greeter]
+})
 class Ng2RefApp {
-    name = 'Angular2';
 }
 
 bootstrap(Ng2RefApp);
