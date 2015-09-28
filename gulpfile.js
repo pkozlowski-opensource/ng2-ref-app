@@ -22,7 +22,10 @@ gulp.task('clean', function (done) {
 
 gulp.task('js', function () {
     var typescript = require('gulp-typescript');
+    var sourcemaps = require('gulp-sourcemaps');
+
     var tsResult = gulp.src([PATHS.src.js, PATHS.typings])
+        .pipe(sourcemaps.init())
         .pipe(typescript({
             typescript: require('typescript'), //use the version of TypeScript from this repo
             noImplicitAny: true,
@@ -33,7 +36,9 @@ gulp.task('js', function () {
             noEmitHelpers: true
         }));
 
-    return tsResult.js.pipe(gulp.dest('dist'));
+    return tsResult.js
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html', function () {
